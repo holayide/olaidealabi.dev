@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-992: 992px;
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+
+  /* Fonts */
+  --font-opensan: "Open Sans", sans-serif;
+  --font-nunito: "Nunito Sans", sans-serif;
+
+  /* Colors */
+  --color-dark-gray: #2e2e35; /* --background-gray: */
+  --color-light-grey: #34343b; /* light-background-grey */
+  --color-pri: #dadada;
+  --color-accent: #e4aa48;
+  --color-accent-soft: #f8d48a;
+  --color-border: rgba(218, 218, 218, 0.2);
+  --color-header: rgba(46, 46, 53, 0.95);
+
+  /* Shadows */
+  --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* card-shadow */
+
+  --shadow-accent-ring: 0 0 0 8px rgba(228, 170, 72, 0.1);
+
+  /* Animations */
+  --animate-glow: glow-pulse 4s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-dark-gray text-pri font-opensan overflow-x-hidden bg-cover bg-center bg-fixed;
+    background-image: url("https://images.unsplash.com/photo-1483401757487-2ced3fa77952");
+  }
+
+  body::before {
+    content: "";
+    @apply fixed inset-0 bg-dark-gray/90 -z-10;
+  }
+
+  .container-base {
+    @apply w-full max-w-300 mx-auto px-8;
+  }
+
+  .section-padding {
+    @apply py-24;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-nunito leading-tight;
+  }
+}
+
+@layer utilities {
+  .transition-base {
+    transition: all var(--transition-base);
+  }
+}
