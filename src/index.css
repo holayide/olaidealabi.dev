@@ -28,6 +28,8 @@
 
   /* Animations */
   --animate-glow: glow-pulse 4s infinite;
+  --animate-scroll-left: scroll-left 30s linear infinite;
+  --animate-scroll-right: scroll-right 30s linear infinite;
 }
 
 html {
@@ -49,6 +51,29 @@ html {
   }
 }
 
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left:hover,
+.animate-scroll-right:hover {
+  animation-play-state: paused;
+}
+
 @layer base {
   body {
     @apply bg-dark-gray text-pri font-opensan overflow-x-hidden bg-cover bg-center bg-fixed;
@@ -61,11 +86,11 @@ html {
   }
 
   .container-base {
-    @apply w-full max-w-300 mx-auto px-8;
+    @apply w-full max-w-300 mx-auto px-6 sm:px-8;
   }
 
   .section-padding {
-    @apply pt-24 pb-8;
+    @apply pt-12 md:pt-24 pb-8 md:pb-10;
   }
 
   h1,

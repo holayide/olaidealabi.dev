@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { cardsData } from "@/data/about";
+import { cardsData } from "@/data/contents";
 
 export default function ThreeDCarousel() {
   const containerRef = useRef<HTMLDivElement | null>(null);

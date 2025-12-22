@@ -2,10 +2,8 @@ import type { HeadingProps } from "@/type";
 
 export default function Heading({ title, type = "light" }: HeadingProps) {
   return (
-    <div className="inline-block mb-12">
-      <h3 className="text-2xl font-bold pb-2 px-2.5 tracking-[0.12em] uppercase">
-        {title}
-      </h3>
+    <div className="inline-block mb-8 md:mb-12">
+      <h3 className="text-2xl md:text-4xl font-bold pb-2 px-2.5">{title}</h3>
       <hr className="w-full border-2 border-accent" />
       <div className="text-center -mt-4">
         <svg
