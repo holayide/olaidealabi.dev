@@ -1,13 +1,3 @@
-export const navLinksHeader = [
-  "Home",
-  "About",
-  "Skills",
-  "Projects",
-  "Testimonials",
-  "Certifications",
-  "Contact",
-];
-
 export const navLinks = [
   "About",
   "Skills",
@@ -47,25 +37,3 @@ export const contactTabs = [
     link: "message",
   },
 ] as const;
-
-// Contact Infos
-export const contactInfoDatas = [
-  {
-    link: "https://www.google.com/maps/place/Lagos,+Nigeria",
-    icon: "📍",
-    title: "Address",
-    text: "Lagos, Nigeria",
-  },
-  {
-    link: "tel:+2347060546743",
-    icon: "📞",
-    title: "Phone",
-    text: "+234 706 054 6743",
-  },
-  {
-    link: "mailto:iamolaidealabi@gmail.com",
-    icon: "📧",
-    title: "Email",
-    text: "iamolaidealabi@gmail.com",
-  },
-];

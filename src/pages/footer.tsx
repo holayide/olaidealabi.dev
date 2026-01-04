@@ -3,22 +3,20 @@ import { navLinks } from "@/data/navlinks";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-gray border-t border-accent text-center py-8 text-base text-pri">
+    //border-t border-accent
+    <footer className="bg-dark-grey text-center py-8 text-base text-pri">
       <div className="text-start container-base">
-        <h3 className="mb-7 text-lg">
+        <h3 className="mb-6 text-2xl font-bold">
           hor<span className="text-accent">la</span>
         </h3>
 
         <div className="flex flex-col sm:flex-row justify-between gap-5">
           <div>
-            <Socials />
-            <p className="text-sm text-start sm:text-end mt-2">
-              Copyright &copy;{" "}
-              <span className="text-accent font-semibold">
-                {new Date().getFullYear()}
-              </span>{" "}
-              by Olaide Alabi.
+            <p className="max-w-60 text-sm mb-5">
+              I'm Ola - I build, learn, and solve problems through quality code.
+              Thanks for exploring my corner of the web!
             </p>
+            <Socials />
           </div>
 
           <nav className="hidden sm:block">
@@ -31,6 +29,15 @@ export default function Footer() {
             </ul>
           </nav>
         </div>
+
+        {/* text-start sm:text-end  */}
+        <p className="text-sm mt-8">
+          Copyright &copy;{" "}
+          <span className="text-accent font-semibold">
+            {new Date().getFullYear()}
+          </span>{" "}
+          by Olaide Alabi. All rights reserved
+        </p>
       </div>
     </footer>
   );

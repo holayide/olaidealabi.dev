@@ -25,8 +25,8 @@ export function TestimonialCard({
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary font-semibold">
-          {avatar}
+        <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary font-semibold overflow-hidden">
+          <img src={avatar} alt="avatar" />
         </div>
 
         <div className="flex-1 flex flex-col items-start">

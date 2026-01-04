@@ -1,10 +1,13 @@
 import type { TestimonialCardProps } from "@/type";
 
-import wtf from "@/assets/certificates/wtf.png";
-import cysec from "@/assets/certificates/cysec.png";
+import justProject from "@/assets/certificates/just-project.jpeg";
 import altSchool from "@/assets/certificates/altschool.png";
 import tech4dev from "@/assets/certificates/tech4dev.png";
-import justProject from "@/assets/certificates/just-project.jpeg";
+import cysec from "@/assets/certificates/cysec.png";
+import wtf from "@/assets/certificates/wtf.png";
+
+import tomisin from "@/assets/testimonials/tomisin.jpg";
+import ebun from "@/assets/testimonials/ebun.jpg";
 
 import olaStore from "@/assets/ola-store.png";
 import myTask from "@/assets/my-task.png";
@@ -36,7 +39,7 @@ export const cardsData = [
 // Projects
 export const projectsData = [
   {
-    id: 1,
+    id: 111111111,
     title: "My Task: Modern Todo Manager",
     description:
       "My Task is a modern, responsive todo management application designed to help users organize, track, and manage tasks efficiently. The app focuses on clarity, speed, and usability, delivering a smooth experience across desktop and mobile devices.",
@@ -54,7 +57,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 222222222,
     title: "Olastore: An Ecommerce website",
     description:
       "Olastore is an e-commerce website, featuring product browsing, an add-to-cart function, and a streamlined checkout process for seamless purchases.",
@@ -72,7 +75,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 3,
+    id: 333333333,
     title: "Space tourism website",
     description:
       "A responsive multi-page website built for a Frontend Mentor challenge, featuring a visually rich interface for exploring space destinations, crew, and technology.",
@@ -95,12 +98,12 @@ export const projectsData = [
 export const testimonials: TestimonialCardProps[] = [
   {
     quote:
-      "Yuelin brings strong full-stack engineering skills and clear communication to the table. I've seen him balance technical depth with rapid prototyping — especially in fast-changing environments where clarity and speed are essential. He's the kind of engineer who makes those around him better.",
-    name: "Fucai Ke",
-    title: "Assistant Lecturer",
-    company: "Monash University",
-    avatar: "FK",
-    linkedinUrl: "https://www.linkedin.com/in/fucai-ke",
+      "I had the pleasure of working with her as a frontend developer who consistently delivered assigned tasks on time, paid close attention to detail, and showed a strong sense of ownership over her work. Her willingness to learn, take feedback positively, and collaborate effectively made her a valuable member of the team, and she would be an asset to any organization.",
+    name: "Oluwatomisin Owolabi",
+    title: "Product Implementation & Support",
+    company: "Bluechip Technologies Limited",
+    avatar: tomisin,
+    linkedinUrl: "https://www.linkedin.com/in/oluwatomisin-owolabi-11963b175/",
   },
   {
     quote:
@@ -113,12 +116,12 @@ export const testimonials: TestimonialCardProps[] = [
   },
   {
     quote:
-      "Yuelin's dedication to clean code and best practices sets him apart. He not only writes excellent code but also mentors junior developers with patience and clarity. His contributions have significantly improved our development workflow.",
-    name: "Michael Rodriguez",
-    title: "Engineering Lead",
-    company: "Digital Solutions Ltd",
-    avatar: "MR",
-    linkedinUrl: "https://www.linkedin.com",
+      "Olaide is an amazing colleague I would love to work with again. She is proactive, thoughtful, experienced, and resourceful, and she never backs down from a challenge. She is truly an invaluable asset to any company.",
+    name: "Ebunoluwa Oni",
+    title: "Frontend Developer",
+    company: "Prunedge",
+    avatar: ebun,
+    linkedinUrl: "https://www.linkedin.com/in/ebunoluwa-oni-6929731a9/",
   },
 ];
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 
-import { navLinksHeader } from "@/data/navlinks";
+import { navLinks } from "@/data/navlinks";
 import MobileMenu from "./mobile-menu";
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
       { rootMargin: "-50% 0px -50% 0px" }
     );
 
-    const sections = navLinksHeader
+    const sections = navLinks
       .map((link) => document.getElementById(link.toLowerCase()))
       .filter((section): section is HTMLElement => section !== null);
 
@@ -57,7 +57,7 @@ export default function Header() {
             </a>
 
             <div className="hidden md:flex gap-8 text-[15px]">
-              {navLinksHeader.map((item) => {
+              {navLinks.map((item) => {
                 const id = item.toLowerCase();
                 const isActive = activeSection === id;
 

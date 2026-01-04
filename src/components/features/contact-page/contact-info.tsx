@@ -1,4 +1,4 @@
-import { contactInfoDatas } from "@/data/navlinks";
+import { contactInfoDatas } from "./contactsinfo-data";
 
 export default function ContactInfo() {
   return (
