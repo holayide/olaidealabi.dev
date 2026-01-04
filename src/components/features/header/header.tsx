@@ -1,13 +1,41 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 
-import { navLinks } from "@/data/navlinks";
+import { navLinksHeader } from "@/data/navlinks";
 import MobileMenu from "./mobile-menu";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const [activeSection, setActiveSection] = useState("");
+
+  // track nav
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id === "hero" ? "" : entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+
+    const sections = navLinksHeader
+      .map((link) => document.getElementById(link.toLowerCase()))
+      .filter((section): section is HTMLElement => section !== null);
+
+    const hero = document.getElementById("hero");
+
+    sections.forEach((section) => observer.observe(section));
+    if (hero) observer.observe(hero);
+
+    return () => observer.disconnect();
+  }, []);
+
+  // scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
@@ -29,15 +57,29 @@ export default function Header() {
             </a>
 
             <div className="hidden md:flex gap-8 text-[15px]">
-              {navLinks.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="hover:text-accent relative after:absolute after:h-0.5 after:bg-accent after:w-0 hover:after:w-full after:left-0 after:-bottom-1 after:transition-all"
-                >
-                  {item}
-                </a>
-              ))}
+              {navLinksHeader.map((item) => {
+                const id = item.toLowerCase();
+                const isActive = activeSection === id;
+
+                return (
+                  <a
+                    key={item}
+                    href={`#${id}`}
+                    className={`relative transition-colors
+                        ${isActive ? "text-accent" : "hover:text-accent"}
+                        after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-accent
+                        after:transition-all
+                        ${
+                          isActive
+                            ? "after:w-full"
+                            : "after:w-0 hover:after:w-full"
+                        }
+                      `}
+                  >
+                    {item}
+                  </a>
+                );
+              })}
             </div>
 
             <button

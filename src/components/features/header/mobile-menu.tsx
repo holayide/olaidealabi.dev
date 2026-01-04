@@ -12,7 +12,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
       />
 
       <aside
-        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-dark-gray z-50 p-10 transition-transform ${
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-dark-gray z-600 p-10 transition-transform ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

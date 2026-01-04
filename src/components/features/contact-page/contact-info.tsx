@@ -17,7 +17,7 @@ export default function ContactInfo() {
           opportunities.
         </p>
 
-        <div className="mt-20 mb-15 w-full grid grid-cols-3 items-center justify-center">
+        <div className="mt-20 mb-15 w-full grid grid-cols-2 md:grid-cols-3 gap-y-5 items-center justify-center">
           {contactInfoDatas.map((info) => (
             <a
               key={info.title}

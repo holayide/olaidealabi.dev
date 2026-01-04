@@ -1,3 +1,13 @@
+export const navLinksHeader = [
+  "Home",
+  "About",
+  "Skills",
+  "Projects",
+  "Testimonials",
+  "Certifications",
+  "Contact",
+];
+
 export const navLinks = [
   "About",
   "Skills",
