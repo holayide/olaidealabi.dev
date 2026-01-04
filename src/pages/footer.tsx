@@ -30,7 +30,6 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* text-start sm:text-end  */}
         <p className="text-sm mt-8">
           Copyright &copy;{" "}
           <span className="text-accent font-semibold">

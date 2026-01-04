@@ -25,7 +25,7 @@ export default function HeroContent() {
 
       <div className="flex flex-wrap gap-4 mb-8">
         <a
-          href="#portfolio"
+          href="#projects"
           className="px-6 py-3 inline-flex items-center justify-center text-base font-medium bg-accent text-black rounded-lg hover:-translate-y-0.5 transition"
         >
           View My Work{" "}
