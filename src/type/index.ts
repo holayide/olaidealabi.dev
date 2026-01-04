@@ -3,11 +3,6 @@ export interface MobileMenuProps {
   onClose: () => void;
 }
 
-export interface HeadingProps {
-  title: string;
-  type?: "light" | "dark";
-}
-
 export interface SkillsProps {
   skills: {
     name: string;
@@ -29,4 +24,24 @@ export interface ProjectProps {
 export interface ProjectDetailProps {
   selectedProject: ProjectProps;
   setSelectedProject: React.Dispatch<React.SetStateAction<ProjectProps | null>>;
+}
+
+export interface TestimonialCardProps {
+  quote: string;
+  name: string;
+  title: string;
+  company: string;
+  avatar: string;
+  linkedinUrl?: string;
+}
+
+export interface CertificateModalProps {
+  closeModal: () => void;
+  selectedCert: number;
+}
+
+export interface ContactFormValues {
+  name: string;
+  email: string;
+  message: string;
 }

@@ -1,21 +1,11 @@
-import type { HeadingProps } from "@/type";
-
-export default function Heading({ title, type = "light" }: HeadingProps) {
+export default function Heading({ title }: { title: string }) {
   return (
-    <div className="inline-block mb-8 md:mb-12">
-      <h3 className="text-2xl md:text-4xl font-bold pb-2 px-2.5">{title}</h3>
-      <hr className="w-full border-2 border-accent" />
-      <div className="text-center -mt-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="#e4aa48"
-          viewBox="0 0 20 20"
-          className={`w-5 h-5 inline-block  ${
-            type === "light" ? "bg-light-grey" : "bg-dark-gray"
-          }`}
-        >
-          <path fillRule="evenodd" d="M5 8l5 5 5-5H5z" clipRule="evenodd" />
-        </svg>
+    <div className="inline-block mb-8 md:mb-12 animate-fade-in-down">
+      <h2 className="text-2xl md:text-4xl font-bold pb-2 px-2.5">{title}</h2>
+      <div className="flex items-center justify-center gap-4">
+        <div className="h-0.5 w-20 md:w-32 bg-linear-to-r from-transparent via-yellow-500 to-yellow-500"></div>
+        <div className="w-3 h-3 bg-yellow-500 rotate-45"></div>
+        <div className="h-0.5 w-20 md:w-32 bg-linear-to-l from-transparent via-yellow-500 to-yellow-500"></div>
       </div>
     </div>
   );

@@ -1,3 +1,11 @@
+import type { TestimonialCardProps } from "@/type";
+
+import wtf from "@/assets/certificates/wtf.png";
+import cysec from "@/assets/certificates/cysec.png";
+import altSchool from "@/assets/certificates/altschool.png";
+import tech4dev from "@/assets/certificates/tech4dev.png";
+import justProject from "@/assets/certificates/just-project.jpeg";
+
 import olaStore from "@/assets/ola-store.png";
 import myTask from "@/assets/my-task.png";
 import space from "@/assets/space.png";
@@ -35,6 +43,7 @@ export const projectsData = [
     image: myTask,
     tags: ["React19", "TailwindCSS", "ShadCN UI", "+3 more"],
     liveUrl: "https://my-tasktastic.netlify.app/",
+    githubUrl: "https://github.com/holayide/todo-project-altsch",
     features: [
       "Create, edit, and delete tasks with form validation",
       "Toggle task status between in-progress and completed",
@@ -52,6 +61,7 @@ export const projectsData = [
     image: olaStore,
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "+2 more"],
     liveUrl: "https://cerulean-druid-6b3fc3.netlify.app/",
+    githubUrl: "https://github.com/holayide/olastore",
     features: [
       " Product listing with detailed product pages",
       "Add-to-cart and remove-from-cart functionality",
@@ -65,10 +75,11 @@ export const projectsData = [
     id: 3,
     title: "Space tourism website",
     description:
-      "The Space Tourism Website is a multi-page, responsive website built as part of a Frontend Mentor challenge. The project showcases a visually rich interface that allows users to explore destinations, crew members, and space technology while maintaining pixel-perfect design and smooth navigation across devices.",
+      "A responsive multi-page website built for a Frontend Mentor challenge, featuring a visually rich interface for exploring space destinations, crew, and technology.",
     image: space,
     tags: ["React19", "Tailwind CSS", "TypeScript"],
     liveUrl: "https://space-tourism-ola.netlify.app/",
+    githubUrl: "https://github.com/holayide/space-tourism",
     features: [
       " Multi-page layout with dynamic content switching",
       "Explore space destinations with detailed descriptions",
@@ -77,5 +88,61 @@ export const projectsData = [
       "Fully responsive design for mobile, tablet, and desktop",
       "Pixel-perfect implementation based on design specs",
     ],
+  },
+];
+
+// Testimonial
+export const testimonials: TestimonialCardProps[] = [
+  {
+    quote:
+      "Yuelin brings strong full-stack engineering skills and clear communication to the table. I've seen him balance technical depth with rapid prototyping — especially in fast-changing environments where clarity and speed are essential. He's the kind of engineer who makes those around him better.",
+    name: "Fucai Ke",
+    title: "Assistant Lecturer",
+    company: "Monash University",
+    avatar: "FK",
+    linkedinUrl: "https://www.linkedin.com/in/fucai-ke",
+  },
+  {
+    quote:
+      "Working with Yuelin was a pleasure. His ability to quickly understand complex requirements and deliver high-quality solutions consistently impressed me. His collaborative approach and technical expertise make him an invaluable team member.",
+    name: "Sarah Chen",
+    title: "Senior Product Manager",
+    company: "Tech Innovations Inc",
+    avatar: "SC",
+    linkedinUrl: "https://www.linkedin.com",
+  },
+  {
+    quote:
+      "Yuelin's dedication to clean code and best practices sets him apart. He not only writes excellent code but also mentors junior developers with patience and clarity. His contributions have significantly improved our development workflow.",
+    name: "Michael Rodriguez",
+    title: "Engineering Lead",
+    company: "Digital Solutions Ltd",
+    avatar: "MR",
+    linkedinUrl: "https://www.linkedin.com",
+  },
+];
+
+// Certifications
+export const certifications = [
+  {
+    id: 1,
+    title: "Women techsters fellowship",
+    image: wtf,
+  },
+  {
+    id: 2,
+    title: "She roots",
+    image: cysec,
+  },
+  { id: 3, title: "Altschool", image: altSchool },
+  {
+    id: 4,
+    title: "Women techsters bootcamp",
+    image: tech4dev,
+  },
+  {
+    id: 5,
+    title: "Just project",
+    image: justProject,
   },
 ];

@@ -1,5 +1,5 @@
-import { detailsPopup } from "@/data/navlinks";
 import type { ProjectDetailProps } from "@/type";
+import { detailsPopup } from "@/data/navlinks";
 import { useState } from "react";
 
 export default function ProjectDetail({
@@ -10,7 +10,7 @@ export default function ProjectDetail({
   const [activeSection, setActiveSection] = useState<ActiveSection>("overview");
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-600 flex items-center justify-center">
       {/* Backdrop */}
       <div
         onClick={() => setSelectedProject(null)}
@@ -26,7 +26,7 @@ export default function ProjectDetail({
                   "
       >
         <div className="flex items-center justify-between mb-1 px-6">
-          <h2 className="text-xl md:text-2xl font-bold">
+          <h2 className="text-lg sm:text-2xl font-bold">
             {selectedProject.title}
           </h2>
 
@@ -63,13 +63,11 @@ export default function ProjectDetail({
 
         <div className="min-h-auto md:min-h-87.5 h-full px-6 mb-4">
           {activeSection === "overview" && (
-            <div>
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="aspect-video w-full rounded-xl object-cover"
-              />
-            </div>
+            <img
+              src={selectedProject.image}
+              alt={selectedProject.title}
+              className="aspect-video w-full rounded-xl object-cover"
+            />
           )}
 
           {activeSection === "features" && (
@@ -78,7 +76,7 @@ export default function ProjectDetail({
                 Key Features & Highlights
               </h3>
 
-              <div className="flex flex-col gap-2 sm:gap-3 overflow-auto">
+              <div className="max-h-50 sm:max-h-75 pr-5 flex flex-col gap-2 sm:gap-3 overflow-auto no-scrollbar">
                 {selectedProject?.features?.map((feature, i) => (
                   <div className="p-3 sm:p-4 rounded-lg border bg-neutral-800 hover:bg-neutral-700">
                     <div className="flex items-center gap-2 sm:gap-3">

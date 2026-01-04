@@ -58,7 +58,11 @@ export default function PortfolioPage() {
                 View Details
               </button>
 
-              <a className="flex-1 text-center rounded-lg bg-accent px-4 py-2 text-sm font-medium text-black transition hover:bg-accent-soft cursor-pointer">
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                className="flex-1 text-center rounded-lg bg-accent px-4 py-2 text-sm font-medium text-black transition hover:bg-accent-soft cursor-pointer"
+              >
                 Live Site
               </a>
             </div>
