@@ -9,8 +9,6 @@ export default function ProfileImage() {
           className="absolute inset-0 rounded-full bg-linear-to-tr from-accent to-accent-soft blur-[60px] opacity-20 animate-glow"
         />
 
-        {/* <div className="h-full relative rounded-full overflow-hidden bg-light-grey border-4 border-accent/30 shadow-2xl ring-8 ring-accent/10"> */}
-        {/* // shadow-[var(--shadow-card),_0_0_0_8px_rgba(228,170,72,0.1)] */}
         <div
           className="
                 h-full relative rounded-full overflow-hidden

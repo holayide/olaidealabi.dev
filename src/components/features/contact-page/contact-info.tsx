@@ -17,14 +17,20 @@ export default function ContactInfo() {
           opportunities.
         </p>
 
-        <div className="mt-20 mb-15 w-full grid grid-cols-2 md:grid-cols-3 gap-y-5 items-center justify-center">
-          {contactInfoDatas.map((info) => (
+        <div className="mt-20 mb-15 w-full grid grid-cols-2 md:grid-cols-3 gap-y-8 items-center justify-center">
+          {contactInfoDatas.map((info, i) => (
             <a
               key={info.title}
               href="https://www.google.com/maps/place/Lagos,+Nigeria"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center"
+              className={`flex flex-col items-center justify-center
+               ${
+                 i === contactInfoDatas.length - 1
+                   ? "col-span-2 md:col-span-1"
+                   : ""
+               }
+              `}
             >
               <div
                 className="

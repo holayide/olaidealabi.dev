@@ -10,7 +10,7 @@ export function TestimonialCard({
   linkedinUrl,
 }: TestimonialCardProps) {
   return (
-    <div className="h-full bg-card border border-border rounded-xl p-5 md:p-12 max-w-2xl w-full mx-auto">
+    <div className="h-full flex flex-col justify-between bg-card border border-border rounded-xl p-5 md:p-12 max-w-2xl w-full mx-auto">
       <div className="mb-10">
         <svg
           className="size-8 md:size-10 text-primary mb-6"

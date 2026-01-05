@@ -6,6 +6,7 @@ import tech4dev from "@/assets/certificates/tech4dev.png";
 import cysec from "@/assets/certificates/cysec.png";
 import wtf from "@/assets/certificates/wtf.png";
 
+import promise from "@/assets/testimonials/promise.jpg";
 import tomisin from "@/assets/testimonials/tomisin.jpg";
 import ebun from "@/assets/testimonials/ebun.jpg";
 
@@ -107,12 +108,12 @@ export const testimonials: TestimonialCardProps[] = [
   },
   {
     quote:
-      "Working with Yuelin was a pleasure. His ability to quickly understand complex requirements and deliver high-quality solutions consistently impressed me. His collaborative approach and technical expertise make him an invaluable team member.",
-    name: "Sarah Chen",
-    title: "Senior Product Manager",
-    company: "Tech Innovations Inc",
-    avatar: "SC",
-    linkedinUrl: "https://www.linkedin.com",
+      "Olaide is an excellent front-end engineer with a sharp eye for detail and a strong ability to interpret designs exactly as intended. Working with her on Jackobian was a great experience. She learns fast, takes feedback positively, and consistently delivers quality work. I’d confidently recommend her for any front-end role.",
+    name: "Nwanozie Promise",
+    title: "Technical PM",
+    company: "Jackobian",
+    avatar: promise,
+    linkedinUrl: "https://www.linkedin.com/in/promise-nwanozie-eberechukwu/",
   },
   {
     quote:
